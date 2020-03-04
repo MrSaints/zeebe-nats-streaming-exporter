@@ -1,4 +1,4 @@
-package com.fyianlai.maven
+package com.fyianlai.zeebe.exporter.nats
 
 data class NatsStreamingExporterConfiguration(
     val serverUrl: String = "nats://localhost",

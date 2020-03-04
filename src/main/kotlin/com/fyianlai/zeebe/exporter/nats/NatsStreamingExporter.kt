@@ -1,4 +1,4 @@
-package com.fyianlai.maven
+package com.fyianlai.zeebe.exporter.nats
 
 import io.nats.streaming.NatsStreaming
 import io.nats.streaming.Options

@@ -23,7 +23,7 @@ To use this with Zeebe:
 ```
 [[exporters]]
 id = "nats-streaming"
-className = "com.fyianlai.maven.NatsStreamingExporter"
+className = "com.fyianlai.zeebe.exporter.nats.NatsStreamingExporter"
 
   [exporters.args]
   # The available configuration options, and their defaults are below.
