@@ -18,7 +18,7 @@ To use this with Zeebe:
 2. Copy the self-contained JAR (`target/zeebe-nats-streaming-exporter-$VERSION-jar-with-dependencies.jar`) to Zeebe `lib`
 3. Register the exporter by adding the following to `zeebe.cfg.toml`:
 
-```
+```toml
 [[exporters]]
 id = "nats-streaming"
 className = "com.fyianlai.zeebe.exporter.nats.NatsStreamingExporter"
