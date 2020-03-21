@@ -66,6 +66,6 @@ The `MrSaints/zeebe-nats-streaming-exporter` project is NEITHER AFFILIATED WITH 
 Please use this project at your own discretion.
 
 
-## Acknowledgements
+## Acknowledgements
 
 This project draws heavy inspiration from [Zeebe Simple Monitor](https://github.com/zeebe-io/zeebe-simple-monitor), and [Zeebe Hazelcast Exporter](https://github.com/zeebe-io/zeebe-hazelcast-exporter). Without them, this would not have been possible.
