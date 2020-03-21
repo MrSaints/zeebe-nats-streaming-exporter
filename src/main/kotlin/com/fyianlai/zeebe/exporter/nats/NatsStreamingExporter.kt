@@ -59,7 +59,7 @@ class NatsStreamingExporter : Exporter {
 
     override fun export(record: Record<*>) {
         val message = this.transformer(record)
-        this.streamingConnection.publish("zeebe", message)
+        this.streamingConnection.publish(this.configuration.channel, message)
         this.controller.updateLastExportedRecordPosition(record.position)
 
         this.logger.debug("Exported record $record")

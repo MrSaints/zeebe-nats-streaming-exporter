@@ -31,6 +31,7 @@ className = "com.fyianlai.zeebe.exporter.nats.NatsStreamingExporter"
   serverUrl = "nats://localhost"
   clusterId = "zeebe"
   clientIdPrefix = "zeebe-exporter-"
+  channel = "zeebe"
   maxPubAcksInFlight = 10000
   format = "proto"
 ```
