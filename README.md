@@ -1,10 +1,8 @@
 # zeebe-nats-streaming-exporter
 
-_A work in progress._
+**WARNING: This is not ready for production. Please use at your own risk.**
 
 An exporter for [Zeebe](https://github.com/zeebe-io/zeebe) to publish records [NATS Streaming Server (STAN)](https://nats.io/).
-
-**WARNING: This is not ready for production. Please use at your own risk.**
 
 
 ---
@@ -59,3 +57,15 @@ The protobuf schema definition can be found in [`zeebe-exporter-protobuf`](https
 - If the number of published messages that goes unacknowledged reaches `maxPubAcksInFlight`, no further messages will be published, and the last exported record cursor will not be updated
 - There is currently no plan for filtering messages before they are published, as this exporter solution is intended as a quick fire-and-forget
 - For a similar reason to the previous point, there is also currently no plan for routing messages based on their `ValueType`
+
+
+## Boring Stuff
+
+The `MrSaints/zeebe-nats-streaming-exporter` project is NEITHER AFFILIATED WITH NOR ENDORSED BY the offficial Zeebe project or Camunda.
+
+Please use this project at your own discretion.
+
+
+## Acknowledgements
+
+This project draws heavy inspiration from [Zeebe Simple Monitor](https://github.com/zeebe-io/zeebe-simple-monitor), and [Zeebe Hazelcast Exporter](https://github.com/zeebe-io/zeebe-hazelcast-exporter). Without them, this would not have been possible.
