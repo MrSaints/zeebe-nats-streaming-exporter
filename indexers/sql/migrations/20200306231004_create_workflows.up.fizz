@@ -1,0 +1,17 @@
+create_table("workflows") {
+	t.Column("id", "string", {primary: true})
+    t.Column("key", "bigint", {})
+    t.Column("process_id", "string", {})
+    t.Column("version", "integer", {})
+
+    t.Column("resource", "text", {})
+
+    t.Column("created_at", "timestamp", {})
+    t.Column("indexed_at", "timestamp", {})
+
+    t.DisableTimestamps()
+}
+
+add_index("workflows", "key", {})
+add_index("workflows", ["process_id", "version"], {"unique": true})
+add_index("workflows", "created_at", {})

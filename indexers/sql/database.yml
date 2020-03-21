@@ -1,0 +1,7 @@
+development:
+  dialect: postgres
+  database: zeebe-dev
+  user: zeebe-dev-user
+  password: zeebe-dev-pass
+  host: 127.0.0.1
+  pool: 5

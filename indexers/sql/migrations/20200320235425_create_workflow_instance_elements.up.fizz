@@ -1,0 +1,25 @@
+create_table("workflow_instance_elements") {
+    t.Column("id", "string", {primary: true})
+    t.Column("key", "bigint", {})
+    t.Column("partition_id", "integer", {})
+    t.Column("position", "bigint", {})
+    t.Column("workflow_key", "bigint", {})
+    t.Column("workflow_instance_key", "bigint", {})
+
+    t.Column("intent", "string", {})
+    t.Column("element_id", "string", {})
+    t.Column("element_type", "string", {})
+    t.Column("flow_scope_key", "bigint", {})
+
+    t.Column("created_at", "timestamp", {})
+    t.Column("indexed_at", "timestamp", {})
+
+    t.DisableTimestamps()
+}
+
+add_index("workflow_instance_elements", "key", {})
+add_index("workflow_instance_elements", "workflow_key", {})
+add_index("workflow_instance_elements", "workflow_instance_key", {})
+add_index("workflow_instance_elements", ["partition_id", "position"], {})
+add_index("workflow_instance_elements", "intent", {})
+add_index("workflow_instance_elements", "created_at", {})

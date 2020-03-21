@@ -1,0 +1,24 @@
+create_table("workflow_instances") {
+	t.Column("id", "string", {primary: true})
+	t.Column("key", "bigint", {})
+    t.Column("partition_id", "integer", {})
+    t.Column("workflow_key", "bigint", {})
+    t.Column("process_id", "string", {})
+    t.Column("version", "integer", {})
+
+    t.Column("intent", "string", {})
+
+    t.Column("parent_workflow_instance_key", "bigint", {})
+    t.Column("parent_element_instance_key", "bigint", {})
+
+    t.Column("created_at", "timestamp", {})
+    t.Column("indexed_at", "timestamp", {})
+
+    t.DisableTimestamps()
+}
+
+add_index("workflow_instances", "key", {})
+add_index("workflow_instances", "workflow_key", {})
+add_index("workflow_instances", ["process_id", "version"], {})
+add_index("workflow_instances", "intent", {})
+add_index("workflow_instances", "created_at", {})
